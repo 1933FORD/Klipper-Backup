@@ -1,0 +1,15 @@
+[include fluidd.cfg]
+[mcu]
+serial: /dev/serial/by-id/<your-mcu-id>
+
+[virtual_sdcard]
+path: /home/pi/printer_data/gcodes
+on_error_gcode: CANCEL_PRINT
+
+[printer]
+kinematics: none
+max_velocity: 1000
+max_accel: 1000
+
+[mcu]
+serial:  /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A10K2U8M-if00-port0
